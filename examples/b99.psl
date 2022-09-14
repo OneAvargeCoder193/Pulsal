@@ -1,0 +1,33 @@
+include std
+
+99
+
+[
+    dup , " bottles of beer on the wall," print 10 .
+
+    dup , " bottles of beer, take one down, pass it around," print 10 .
+
+    1 - dup
+
+    dup ,
+
+    dup 1 -
+
+    {
+        " bottles of beer on the wall"
+    }
+
+    dup 1 ==
+
+    {
+        " bottle of beer on the wall"
+    }
+
+    print 10 . 10 .
+
+    1 -
+]
+
+"1 bottle of beer on the wall," print 10 .
+"one bottle of beer, take one down, pass it around," print 10 .
+"no more bottles of beer on the wall" print 10 .

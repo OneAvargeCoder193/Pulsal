@@ -1,0 +1,30 @@
+func print
+(
+    1 - [ 1 + dup at dup . 256 % ] pop
+)
+
+func strlen
+(
+    dup 1 - [ 1 + dup at 256 % ]
+    swap -
+)
+
+func strend
+(
+    strlen + 1 -
+)
+
+func charat
+(
+    swap dup third + at
+)
+
+func setchar
+(
+    swap third dup third + third swap setmem
+)
+
+func strcat
+(
+    -
+)

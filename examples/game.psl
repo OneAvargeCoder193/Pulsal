@@ -1,0 +1,80 @@
+include std
+
+func start
+func drawer
+func sink
+func chase
+func shrink
+func tower
+
+func start
+(
+    "0: Check the drawers\n" print
+    "1: Look through the sink\n" print
+    ;
+    1 == {
+        sink ret
+    }
+    drawer ret
+)
+
+func drawer
+(
+    "\nYou saw a long stick in the drawer.\nCould this be used anywhere?\n" print
+    256
+    start
+)
+
+func shrink
+(
+    "\nWith the shrinking device, you escape your cell.\n" print
+    chase
+    
+)
+
+func chase
+(
+    "You unshrink.\n" print
+    "A guard notices you.\nDo you run away, or bribe him?\n" print
+    "0: Run Away\n" print
+    "1: Bribe\n" print
+    ;
+    1 == {
+        "The guard doesn't accept your bribe.\nHe puts you in solitary confinement.\nGAME OVER\n" print
+        quit
+    }
+
+    "You manage to escape the guard.\n" print
+
+    tower
+)
+
+func tower
+(
+    "There is a guard tower nearby.\nDo you sneak past,\nOr take him out?\n" print
+    "0: Sneak past\n" print
+    "1: Take out\n" print
+    ;
+    1 == {
+        "You take out the guard.\nYou escape the prison and are now a free man.\n" print
+        quit
+    }
+    "You are noticed by the guard, who promptly sends you to solitary confinement.\n" print
+    "GAME OVER\n" print
+)
+
+func sink
+(
+    256 == {
+        "\nYou used the stick you found to get the object out of the sink.\nIt seems to be a shrinking device.\n" print
+        shrink
+        ret
+    }
+    "\nThere seemed to be something at the back of the sink,\nBut you couldn't get it out\n" print
+    start
+)
+
+"ADVENTURE GAME\n\n" print
+"You are locked in a prison cell for a crime you didn't commit,\nYou must find a way to escape.\n" print
+
+start

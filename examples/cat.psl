@@ -1,0 +1,3 @@
+include std
+
+inp print 10 .

@@ -1,0 +1,42 @@
+include std
+
+"CALCULATOR\n" print
+"INPUT TWO NUMBERS AND A MATH OPERATION (+, -, *, /, %)\n" print
+
+; ; : dup .
+10 .
+
+dup 43 ==
+{
+    pop + ,
+    10 .
+    quit
+}
+
+dup 45 ==
+{
+    pop - ,
+    10 .
+    quit
+}
+
+dup 42 ==
+{
+    pop * ,
+    10 .
+    quit
+}
+
+dup 47 ==
+{
+    pop / ,
+    10 .
+    quit
+}
+
+dup 37 ==
+{
+    pop % ,
+    10 .
+    quit
+}

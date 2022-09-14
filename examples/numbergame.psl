@@ -1,0 +1,10 @@
+include std
+
+"" 10 % 1 + dup ,
+
+[
+    dup "Choose a number (1 - 10): " print ;
+    dup third < { "The number is greater than your guess.\n" print }
+    dup third > { "The number is smaller than your guess.\n" print }
+    ==
+]
